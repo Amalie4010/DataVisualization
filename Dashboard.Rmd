@@ -2,7 +2,9 @@
 title: "Dashboard"
 author: "Amalie Holten Nielsen, Fraya Andersen and Mathias Nielsen"
 date: "2026-11-21"
-output: html_document
+output: 
+  html_document:
+    css: style.css
 ---
 ```{r, include=FALSE}
 # Good libaries, you may add (*3*)
@@ -43,5 +45,17 @@ gradesDividedByEducation <- read_excel(
 
 source("Graphs/GradesDividedByEducation.R")
 ```
+
+You can make a css class is you want som cool spice:
+
+::: {.side-by-side}
+```{r, echo=FALSE}
+source("Graphs/GradesDividedByEducation.R")
+```
+
+```{r, echo=FALSE}
+source("Graphs/GradesDividedByEducation.R")
+```
+:::
 
 You can try to knit, and see how cool this is.
