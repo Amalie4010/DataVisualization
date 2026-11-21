@@ -1,0 +1,47 @@
+---
+title: "Dashboard"
+author: "Amalie Holten Nielsen, Fraya Andersen and Mathias Nielsen"
+date: "2026-11-21"
+output: html_document
+---
+```{r, include=FALSE}
+# Good libaries, you may add (*3*)
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(tidyverse)
+library(plotly)
+library(htmlwidgets)
+library(jsonlite)
+```
+
+# How to and example graph!
+This is the coolest graph in town!
+
+```{r, include=FALSE}
+# To make this r-code thing, presse "crl + alt + i".
+# include=FALSE means that nothing will be printed.
+# echo=FALSE, means that it will print the graph, but not the code.
+# press the knit button to get a view of the final file.
+```
+
+```{r, include=FALSE}
+# Here i make a varible "gradesDividedByEducation" that contains my dataset. 
+# You can't have the excel-file open when knitting or running for the first time, you will get a zip error.
+
+gradesDividedByEducation <- read_excel(
+  "Datasets/GradesDividedByEducation.xlsx",
+  skip = 1 # I skip 1 because the first line is just some name
+)
+```
+
+```{r, echo=FALSE}
+# This is how to use code from other files.
+# In the file bellow, i use the varible "gradesDividedByEducation" that i have made above, because the variable is created before the code below is run, it is able to use it. 
+# Variables are saved in the program, not the file, so no variables can be called the same and make sure to clean the work space (litle broom tho the right somewhere) to be completely sure your code works properly, and arn't using some unrelated variable.
+
+source("Graphs/GradesDividedByEducation.R")
+```
+
+You can try to knit, and see how cool this is.
