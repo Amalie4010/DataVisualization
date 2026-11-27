@@ -59,3 +59,26 @@ source("Graphs/GradesDividedByEducation.R")
 :::
 
 You can try to knit, and see how cool this is.
+
+
+# How different educations affact your grade
+
+```{r}
+GradeDistrubution2026DividedByEducation <- read_excel(
+  "Datasets/GradeDistribution2026DevidedByEducation.xlsx"
+)
+```
+
+```{r}
+source("Graphs/GradeDistrubution2026DividedByEducation.R")
+
+```
+
+
+
+
+
+
+
+
+
